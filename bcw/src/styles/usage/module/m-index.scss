@@ -1,0 +1,214 @@
+
+
+#index-container{
+    width: 100%;
+    height: 100%;
+    @include flexbox();
+    @include flex-direction(column);
+    header{
+        width: 100%;
+        height: 44px;
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center);
+        position: relative;
+        .logo{
+            width: 80px;
+            height: 30px;
+        }
+        .searchimg{
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            right: 10px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    }
+    .nav{
+        width: 100%;
+        height: 40px;
+        background: #fff;
+        #nav-wrapper{
+           
+            width: 100%;
+            height: 100%;
+            overflow: scroll;
+            .navlist{
+                height: 40px;
+                @include flexbox();
+                width: 630px;
+                 border-top: 2px solid #CCC;
+                li{
+                    width: 90px;
+                    height: 40px;
+                    text-align: center;
+                    line-height: 40px;
+                }
+                .active{
+                    border-top: 2px solid #E3E35F;
+                }
+            }
+    }
+    }
+    .content-swiper-container{
+        @include flex(1);
+         width: 100%;
+         overflow-y: scroll;
+         .index-banner{
+             .banner-swiper-container{
+                 width: 100%;
+                 height: 170px;
+                 img{
+                     width:100%;
+                     height:100%;
+                 }
+             }
+         }
+         .ereabox{
+            width: 100%;
+            height: 100px;
+            background: #fff;
+            .arealist{
+                @include flexbox();
+                width: 100%;
+                height: 100%;
+                li{
+                    @include flexbox();
+                    @include flex(1);
+                    @include flex-direction(column);
+                    @include justify-content(center);
+                    @include align-items(center);
+                    height: 100%;
+                    img{
+                        width: 40px;
+                        height: 40px;
+                    }
+                    b{
+                        font-size: 10px;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+        
+        .homecomlist{
+            ul{
+                li{
+                    width: 100%;
+                    height: 300px;
+                    img{
+                        width: 100%;
+                        height: 200px;
+                    }
+                    .cominfo{
+                        width: 100%;
+                        height: 100px;
+                        .name{
+                            font-size: 14px;
+                            font-weight: bold;
+                            line-height: 30px;
+                            padding-left: 10px;
+                        }
+                        .titlebox{
+                            @include flexbox(); 
+                            padding-right: 10px;
+                            padding-left: 10px;
+                            line-height: 20px;
+                            span{
+                                @include flex(1);
+                            }
+                            b{
+                                display: inline-block;
+                                width: 60px;
+                                height: 22px;
+                                background: red;
+                                color: #fff;
+                                text-align: center;
+                                line-height: 22px;
+                      
+                            }
+                        }
+                        .pricebox{
+                             @include flexbox(); 
+                             padding-right: 10px;
+                             padding-left: 10px;
+                              line-height: 35px;
+                            span{
+                                @include flex(1);
+                            }
+                            b{
+                                display: inline-block;
+                                color:red;
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        .other-slide{
+            .topimg{
+                width: 100%;
+                height: 170px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .comlist{
+                @include flexbox();
+                @include flex-wrap(wrap);
+                li{
+                    @include box-sizing(border-box);
+                    width: 50%;
+                    height: 300px;
+                    
+                    &:nth-child(even){
+                        padding-left: 5px;
+                    }
+                    &:nth-child(odd){
+                        padding-right: 5px;
+                    }
+                    .comimg{
+                        width: 100%;
+                        height: 200px;
+                        
+                    } 
+                    .cominfo{
+                        .name{
+                            height: 50px;
+                            width: 100%;
+                            padding: 10px;
+                        }
+                        .pricebox{
+                            padding: 10px 0px 0 5px;
+                            .curprice{
+                                font-size: 16px;
+                                color: red;
+                            }
+                            .oldprice{
+                                font-size: 10px;
+                                color: darkgray;
+                                text-decoration: line-through;
+                            }
+                             .cartimg{
+                                width: 40px;
+                                height: 20px;
+                                img{
+                                    width: 40px;
+                                    height: 20px;
+                                }
+                            }     
+                        }
+                       
+                    }
+                                  
+                }
+            }
+        }
+    }
+    
+}

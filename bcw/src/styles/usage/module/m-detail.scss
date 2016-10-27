@@ -1,0 +1,229 @@
+@charset "utf-8";
+@import  '../element/yo-loading.scss';
+
+.detail-container{
+    @include flexbox();
+    @include flex-direction(column);
+    width: 100%;
+    height: 100%;
+    
+    
+    
+    header{
+        @include flexbox();
+        @include align-items(center);
+        width: 100%;
+        height: 60px;
+        background: rgba(#fff,0.0);
+         color: rgba(#fff,0);
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 4;
+        .back{
+            width: 30px;
+            height: 30px;
+            margin-left: 10px;
+        }
+        span{
+            @include flex(1)
+            font-size: 18px;
+            text-align: center;
+        }
+        .share{
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+    }
+    .headeractive{
+        background: rgba(#fff,0.3);
+        span{
+            color: rgba(#000,0.6);
+        }
+    }
+    .detailbox{
+        @include flex(1);
+        width: 100%;
+        overflow: hidden;
+        #iscroll-wrapper{
+            width: 100%;
+            height: 100%;
+            .content{
+                width: 100%;
+                .banner-swiper-container{
+                    width: 100%;
+                    height: 400px;
+                    img{
+                        width: 100%;
+                        height: 400px;
+                    }
+                }
+                .cominfo{
+                    width: 100%;
+                    height: 150px;
+                    background: #fff;
+                    .price{
+                        width: 100%;
+                        height: 40px;
+                        border-bottom: 0.5px solid #ccc;
+                        padding-left: 10px;
+                        span{
+                           font-size: 22px;
+                           color: red; 
+                        }
+                        b{
+                            font-size: 12px;
+                            text-decoration: line-through;
+                            margin-left: 30px;
+                        }
+                    }   
+                    .des{
+                        width: 100%;
+                        height: 100px;
+                        padding-left: 15px;
+                        padding-right: 15px;
+                        overflow: hidden;
+                        .title{
+                            font-size: 16px;
+                            line-height: 40px;
+                        }
+                        .text{
+                            font-size: 14px;
+                            line-height: 22px;
+                        }
+                    }
+                }
+                .postage{
+                    width: 100%;
+                    height: 100px;
+                    background: #FFF;
+                    margin-top: 10px;
+                    .title{
+                        @include flexbox();
+                        @include align-items(center);
+                        width: 100%;
+                        height: 40px;
+                        line-height: 40px;
+                        
+                        border-bottom: 0.5px solid #ccc;
+                        div{
+                            width: 40px;
+                            height: 20px;
+                            background: red;
+                            color: #fff;
+                            font-size: 8px;
+                            margin-left: 10px;
+                            margin-right: 10px;
+                            text-align: center;
+                            line-height: 20px;
+                         }
+                        b{
+                            
+                        }
+                        
+                    }
+                    ul{
+                        width: 100%;
+                        height: 50px;
+                        @include flexbox();
+                        @include align-items(center);
+                        li{
+                            @include flex(1);
+                            img{
+                                width: 10px;
+                                height: 10px;
+                            }
+                            b{
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }
+                .eaterlove{
+                    width: 100%;
+                    height: 300px;
+                    .title{
+                        @include flexbox();
+                        width: 100%;
+                        height: 50px;
+                        @include align-items(center);
+                        img{
+                            width: 24px;
+                            height: 24px;
+                            margin-left: 10px;
+                            margin-right: 20px;
+                        }
+                        span{
+                            font-size: 16px;
+                        }
+                    }
+                    ul{
+                        @include flexbox();
+                        width: 100%;
+                        height: 250px;
+                        li{
+                            @include flex(1);
+                            padding: 3px;
+                            img{
+                                width: 100%;
+                                height: 150px;
+                                margin-bottom: 5px;
+                            }
+                            p{
+                                font-size: 14px;
+                            }
+                            span{
+                                font-size: 14px;
+                                color: red;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    footer{
+        @include flexbox();
+        width: 100%;
+        height: 54px;
+        background: #fff;
+        ul{
+             @include flexbox();
+             @include flex(6.5);
+             li{
+                 @include flexbox();
+                 @include flex-direction(column);
+                 @include flex(1);
+                 @include justify-content(center);
+                 @include align-items(center);
+                 img{
+                     width: 25px;
+                     height: 25px;
+                 }
+                 b{
+                     font-size: 12px;
+                 }
+             }
+        }
+        div{
+           @include flexbox();
+           @include flex(3.5); 
+           @include justify-content(center);
+           @include align-items(center);
+           button{
+               width: 90%;
+               height: 40px ;
+               background: yellow;
+               border-radius: 20px;
+               border: 0;
+               font-size: 16px;
+           }
+        }
+        
+    }
+}
+
+
+

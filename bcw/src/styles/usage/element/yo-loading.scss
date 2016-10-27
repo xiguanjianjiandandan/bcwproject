@@ -1,0 +1,51 @@
+@charset "utf-8";
+@import "../../lib/element/yo-loading";
+
+/**
+ * yo-loading扩展
+ */
+
+@include yo-loading(
+    $name: a,
+    $bgcolor: rgba(#000,.2),
+    $ico-color: #FED944,
+    $color: #FED944
+){
+    width: 100px;
+    height: 100px;
+    .inner{
+        .yo-ico{
+            display:inline-block; 
+            animation-name: rotateloading;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+//          animation-delay: 1s;
+            animation-iteration-count: infinite;
+            &::before {
+                content: "";
+                color: #FED944;
+                font-family: yofont;
+                font-size: 0.5rem;
+                width: 50px;
+                height: 50px;
+                
+                
+            }
+        }
+        span{
+            display: block;
+            margin-top: 10px;
+        }
+    }
+    @keyframes rotateloading{
+      0%{
+       transform: rotate(0deg);
+      }
+      100%{
+        transform: rotate(360deg);
+      }
+    }
+    
+
+    
+};
